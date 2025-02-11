@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body onload="showDaily()">
+  <main>
+  <div id="controlCard">
+    <div id="name">
+      <img src="./images/image-jeremy.png" alt="Jeremy Profile Picture">
+      <div id="nameinfo">
+        <p>Report for</p>
+        <p>Jeremy Robson</p>
+      </div>
+    </div>
+    <div id="controls">
+      <p id="dailyButton" onclick="showDaily()">Daily</p>
+      <p id="weeklyButton" onclick="showWeekly()">Weekly</p>
+      <p id="monthlyButton" onclick="showMonthly()">Monthly</p>
+    </div>
+  </div>
+  <div class="timecard">
+   <img src="./images/icon-work.svg" alt="Briefcase Icon" class="timetypeicon">
+   <div class="timecardinfo">
+    <div class="cardheader">
+      <p>Work</p><img src="./images/icon-ellipsis.svg" alt="Elipsis icon">
+    </div>
+    <div class="time">
+      <p id="time0"></p>
+      <div>
+        <span id="timeframe0"> - </span><span id="prev0"></span>
+      </div>
+    </div>
+   </div>
+  </div>
+  <div class="timecard">
+    <img src="./images/icon-play.svg" alt="videogame controller Icon" class="timetypeicon">
+    <div class="timecardinfo">
+      <div class="cardheader">
+      <p>Play</p><img src="./images/icon-ellipsis.svg" alt="Elipsis icon">
+      </div>
+      <div class="time">
+          <p id="time1"></p>
+          <div>
+            <span id="timeframe1"> - </span><span id="prev1"></span>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="timecard">
+    <img src="./images/icon-study.svg" alt="Book Icon" class="timetypeicon">
+    <div class="timecardinfo">
+      <div class="cardheader">
+        <p>Study</p><img src="./images/icon-ellipsis.svg" alt="Elipsis icon">
+      </div>
+      <div class="time">
+        <p id="time2"></p>
+        <div>
+          <span id="timeframe2"> - </span><span id="prev2"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="timecard">
+    <img src="./images/icon-exercise.svg" alt="Running Icon" class="timetypeicon">
+    <div class="timecardinfo">
+     <div class="cardheader">
+      <p>Exercise</p><img src="./images/icon-ellipsis.svg" alt="Elipsis icon">
+     </div>
+      <div class="time">
+        <p id="time3"></p>
+        <div>
+          <span id="timeframe3"> - </span><span id="prev3"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="timecard">
+    <img src="./images/icon-social.svg" alt="Message Icon" class="timetypeicon">
+   <div class="timecardinfo">
+    <div class="cardheader">
+      <p>Social</p><img src="./images/icon-ellipsis.svg" alt="Elipsis icon">
+    </div>
+    <div class="time">
+      <p id="time4"></p>
+      <div>
+        <span id="timeframe4"> - </span><span id="prev4">7hrs</span>
+      </div>
+    </div>
+   </div>
+  </div>
+  <div class="timecard">
+    <img src="./images/icon-self-care.svg" alt="Heart Icon" class="timetypeicon">
+    <div class="timecardinfo">
+      <div class="cardheader">
+        <p>Self Care</p><img src="./images/icon-ellipsis.svg" alt="Elipsis icon">
+      </div>
+      <div class="time">
+        <p id="time5"></p>
+        <div>
+          <span id="timeframe5"> - </span><span id="prev5"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+<script defer src="script.js"></script>
+</html>
